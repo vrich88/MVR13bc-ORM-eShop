@@ -1,3 +1,4 @@
+// seeds for product tag
 const { ProductTag } = require('../models');
 
 const productTagData = [
