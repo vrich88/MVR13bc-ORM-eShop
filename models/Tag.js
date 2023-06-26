@@ -1,7 +1,8 @@
+// require dependencies
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection.js');
 
+// set up class & model
 class Tag extends Model {}
 
 Tag.init(
