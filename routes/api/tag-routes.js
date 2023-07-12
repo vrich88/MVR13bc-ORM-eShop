@@ -35,7 +35,7 @@ router.put("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-  }).then((data) => res.status(200).json);
+  }).then((data) => res.status(200).json(data));
 });
 
 // delete on tag by its `id` value
