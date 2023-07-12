@@ -27,11 +27,10 @@ router.get("/:id", (req, res) => {
       Category,
       {
         model: Tag,
-        through: ProductTag
-      }
-    ]
-  })
-  .then((data) => res.json(data));
+        through: ProductTag,
+      },
+    ],
+  }).then((data) => res.json(data));
 });
 
 // create new product
@@ -114,10 +113,9 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
   Product.destroy({
     where: {
-      id: req.params.id
+      id: req.params.id,
     },
-  })
-  .then ((data) => res.status(200).json(data))
+  }).then((data) => res.status(200).json(data));
 });
 
 module.exports = router;
